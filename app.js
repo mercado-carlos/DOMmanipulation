@@ -50,3 +50,16 @@ console.log('The parent element is: ', bookListQ.parentElement.parentElement);
 
 console.log(bookListQ.childNodes);
 console.log(bookListQ.children);
+
+/* Traversing the DOM (part 2) */
+console.log('book-list next sibling is: ', bookListQ.nextSibling);
+console.log('book-list next sibling is: ', bookListQ.nextElementSibling);
+
+console.log('book-list previuos sibling is: ', bookListQ.previousSibling);
+console.log(
+    'book-list previuos sibling is: ',
+    bookListQ.previousElementSibling
+);
+
+bookListQ.previousElementSibling.querySelector('p').innerHTML +=
+    '<br/>Too cool for everyone else!';
