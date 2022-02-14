@@ -144,3 +144,18 @@ searchBar.addEventListener('keyup', (e) => {
             : (book.style.display = 'none');
     });
 });
+
+/* Tabbed Content */
+const tabs = document.querySelector('.tabs');
+const panels = document.querySelectorAll('.panel');
+tabs.addEventListener('click', (e) => {
+    if (e.target.tagName == 'LI') {
+        const beansPanel = document.querySelector(e.target.dataset.beans);
+
+        panels.forEach((panel) => {
+            panel == beansPanel
+                ? panel.classList.add('active')
+                : panel.classList.remove('active');
+        });
+    }
+});
