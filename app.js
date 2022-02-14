@@ -110,3 +110,14 @@ addForm.addEventListener('submit', (e) => {
     li.appendChild(deleteBtn);
     list.appendChild(li);
 });
+
+/* Attributes */
+const book = document.querySelector('li:first-child .name');
+book.getAttribute('class');
+console.log(book);
+book.setAttribute('class', 'name-2');
+console.log(book);
+const hasBook = book.hasAttribute('href');
+console.log(hasBook);
+book.removeAttribute('class');
+console.log(book);
