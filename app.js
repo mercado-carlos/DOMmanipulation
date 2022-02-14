@@ -112,7 +112,7 @@ addForm.addEventListener('submit', (e) => {
 });
 
 /* Attributes */
-const book = document.querySelector('li:first-child .name');
+/* const book = document.querySelector('li:first-child .name');
 book.getAttribute('class');
 console.log(book);
 book.setAttribute('class', 'name-2');
@@ -120,4 +120,12 @@ console.log(book);
 const hasBook = book.hasAttribute('href');
 console.log(hasBook);
 book.removeAttribute('class');
-console.log(book);
+console.log(book); */
+
+/* Checkboxes & Change Events */
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', (e) => {
+    hideBox.checked
+        ? (list.style.display = 'none')
+        : (list.style.display = 'initial');
+});
