@@ -102,6 +102,10 @@ addForm.addEventListener('submit', (e) => {
     bookName.textContent = value;
     deleteBtn.textContent = 'delete';
 
+    /* Styles & Classes */
+    bookName.classList.add('name');
+    deleteBtn.classList.add('delete');
+
     li.appendChild(bookName);
     li.appendChild(deleteBtn);
     list.appendChild(li);
