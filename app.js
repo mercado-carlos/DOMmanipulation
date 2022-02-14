@@ -66,15 +66,24 @@ bookListQ.previousElementSibling.querySelector('p').innerHTML +=
 
 /* Events */
 const btns = document.querySelectorAll('#book-list .delete');
-Array.from(btns).forEach((btns) => {
+/* Array.from(btns).forEach((btns) => {
     btns.addEventListener('click', (e) => {
         const li = e.target.parentElement;
         li.parentNode.removeChild(li);
     });
-});
+}); */
 
 const link = document.querySelector('#page-banner a');
 link.addEventListener('click', (e) => {
     e.preventDefault();
     console.log('Navigation to', e.target.textContent, 'was prevented.');
+});
+
+/* Event Bubbling */
+const list = document.querySelector('#book-list ul');
+list.addEventListener('click', (e) => {
+    if (e.target.className == 'delete') {
+        const li = e.target.parentElement;
+        list.removeChild(li);
+    }
 });
